@@ -125,8 +125,33 @@ body::before {
 .surprise-image {
     width: auto;
     height: 250px;
+    max-width: 100%;
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .message {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .surprise-image {
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .text-content {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .surprise-image {
+        max-width: 250px;
+    }
 }
 
 @keyframes fadeIn {
