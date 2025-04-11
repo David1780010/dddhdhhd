@@ -149,8 +149,20 @@ body::before {
 }
 
 @media screen and (max-width: 480px) {
+    .message {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
     .surprise-image {
+        height: auto;
+        width: 100%;
         max-width: 250px;
+    }
+
+    .text-content {
+        order: -1;
     }
 }
 
